@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미술 작품 갤러리 (Art Gallery)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Art Gallery</h1>
+        <p>Curated Masterpieces & History</p>
+    </header>
+
+    <main class="gallery-container" id="galleryGrid">
+        </main>
+
+    <div class="detail-overlay" id="detailOverlay">
+        <button class="back-btn" onclick="closeDetail()" aria-label="뒤로가기">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+            </svg>
+        </button>
+        <div class="detail-content" id="detailContent">
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+/* 기본 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 헤더 스타일 */
+header {
+    padding: 50px 20px 30px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+header p {
+    font-size: 13px;
+    color: #888888;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 메인 화면: 미술 작품 그리드 레이아웃 */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px 60px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* 카드 UI 컴포넌트 */
+.art-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f3f3;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.art-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-wrap {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.art-card:hover .card-image-wrap img {
+    transform: scale(1.04);
+}
+
+.card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-info .art-year {
+    font-size: 11px;
+    font-weight: 700;
+    color: #bfa15f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-info .art-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.3;
+}
+
+.card-info .art-artist {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 1px;
+}
+
+/* 상세 페이지 오버레이 기본 스타일 */
+.detail-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    overflow-y: auto;
+    transition: opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.detail-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* 뒤로가기 액션 버튼 UI */
+.back-btn {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1010;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
+
+.back-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #111111;
+}
+
+/* 상세 화면 반응형 2단 레이아웃 */
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .detail-content {
+        flex-direction: row;
+    }
+}
+
+.detail-image-side {
+    width: 100%;
+    height: 50vh;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .detail-image-side {
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+.detail-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-text-side {
+    width: 100%;
+    padding: 40px 24px;
+    background: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .detail-text-side {
+        width: 50%;
+        margin-left: 50%;
+        padding: 90px 60px;
+    }
+}
+
+/* 타이틀 앤 하트 레이아웃 */
+.title-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.detail-text-side .detail-year {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #f5f5f3;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.detail-text-side .detail-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1.25;
+}
+
+/* 하트 (좋아요) 버튼 스타일 */
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.like-btn:active {
+    transform: scale(0.85);
+}
+
+.like-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: #111111;
+    stroke-width: 2px;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.like-btn.liked svg {
+    fill: #ff4b4b;
+    stroke: #ff4b4b;
+    animation: heartBeat 0.3s ease-out;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.detail-text-side .detail-artist {
+    font-size: 19px;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.detail-text-side .detail-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    margin-bottom: 40px;
+}
+
+.detail-text-side h3 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    color: #111111;
+}
+
+.detail-text-side .detail-description {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   댓글 피드 섹션 UI 스타일
+   ========================================================================== */
+.comments-section {
+    margin-top: 40px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.comment-input:focus {
+    border-color: #111111;
+}
+
+.comment-submit-btn {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.comment-submit-btn:hover {
+    background-color: #333333;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.comment-item {
+    background-color: #f9f9f9;
+    padding: 16px 20px;
+    border-radius: 16px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.comment-user {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #999999;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.5;
+}
+
+/* Hero 모션용 임시 스타일 */
+.hero-transition-element {
+    position: fixed;
+    z-index: 1005;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-transition-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
