@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    
     <title>미술 작품 갤러리 (Art Gallery)</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 모바일 브라우저에서 하트/댓글 아이콘 영역이 사라지는 버그 방어 조치 */
+        .feed-action-bar {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 16px !important;
+            margin-top: 8px !important;
+            margin-bottom: 12px !important;
+            min-height: 24px !important; /* 공간이 0으로 접히는 것 방지 */
+            height: 24px !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .feed-action-icon {
+            width: 24px !important;
+            height: 24px !important;
+            min-width: 24px !important;
+            min-height: 24px !important;
+            display: block !important;
+            flex-shrink: 0 !important; /* 모바일 그리드에서 찌그러짐 방지 */
+            cursor: pointer !important;
+        }
+
+        .feed-action-icon svg {
+            width: 24px !important;
+            height: 24px !important;
+            display: block !important;
+        }
+        
+        /* 작품 연도와 텍스트 레이아웃 배치 최적화 */
+        .feed-caption-area {
+            margin-top: 4px !important;
+            clear: both !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +56,7 @@
     </header>
 
     <main class="gallery-container" id="galleryGrid">
-        </main>
+    </main>
 
     <div class="detail-overlay" id="detailOverlay">
         <button class="back-btn" onclick="closeDetail()" aria-label="뒤로가기">
@@ -23,7 +65,7 @@
             </svg>
         </button>
         <div class="detail-content" id="detailContent">
-            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
