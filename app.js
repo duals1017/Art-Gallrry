@@ -5,7 +5,7 @@ const artPieces = [
         title: "돌 깨는 사람들 (The Stone Breakers)",
         artist: "귀스타브 쿠르베 (Gustav Courbet)",
         year: "1849",
-        imageUrl: "https://share.google/pAOyvSqvIB01Udf7X",
+        imageUrl: "https://cdn.eroun.net/news/photo/201905/5607_20861_1123.jpg",
         description: "사실주의(리얼리즘)의 거장 쿠르베가 노동의 가혹한 현실을 여과 없이 포착한 기념비적인 작품입니다. 세습되는 빈곤과 고단한 육체노동을 하는 노인과 소년의 모습을 이상화나 미화 없이 거칠고 사실적인 필치로 그려내어 당대 사회에 큰 충격을 주었습니다.",
         isLiked: false,
         comments: []
@@ -15,7 +15,7 @@ const artPieces = [
         title: "오르낭의 매장 (A Burial At Ornans)",
         artist: "귀스타브 쿠르베 (Gustav Courbet)",
         year: "1849",
-        imageUrl: "https://share.google/kqVi2D3UzWXlansCa",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gXBioOtf1uZdJqaAeFoJN7_71pUmqjTLmwqvy_QV9g&s=10",
         description: "전통적으로 신화나 역사 속 영웅들에게만 허락되었던 거대한 크기의 캔버스에, 평범한 시골 마을 주민들의 장례식 풍경을 있는 그대로 그려낸 쿠르베의 또 다른 대표작입니다. 평범한 인간의 죽음과 삶 역시 종교적·역사적 사건만큼이나 엄숙하고 존엄하다는 것을 웅변합니다.",
         isLiked: false,
         comments: []
@@ -25,7 +25,7 @@ const artPieces = [
         title: "이삭 줍기 (The Gleaners)",
         artist: "장 프랑수아 밀레 (Jean-François Millet)",
         year: "1857",
-        imageUrl: "https://share.google/LCvflXNb8E2KALnj9",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbvVl7vufcnAqMyjysnNm81u9AmUVryfom3BZJ1s0ytQ&s=10",
         description: "수확이 끝난 거친 밭에서 남겨진 이삭을 줍고 있는 세 여인의 모습을 숭고하고 대지 같은 무게감으로 표현한 밀레의 마스터피스입니다. 허리를 굽혀 묵묵히 일하는 그들의 뒷모습은 프로테스탄트적인 노동의 신성함과 고요한 경건함을 자아냅니다.",
         isLiked: false,
         comments: []
@@ -35,7 +35,7 @@ const artPieces = [
         title: "만종 (The Angelus)",
         artist: "장 프랑수아 밀레 (Jean-François Millet)",
         year: "1859",
-        imageUrl: "https://share.google/f2oj29a71N3WPsPya",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRK200OncI5EMwqY9P423EzxhwUHT7AjRF1QhIyaqs6w&s=10",
         description: "하루의 고된 농사일을 마치고 멀리서 들려오는 교회의 저녁 종소리에 맞춰 부부가 경건하게 감사의 기도를 올리는 장면입니다. 소박한 노동의 현장과 신앙이 결합된 가장 아름다운 순간으로, 노동의 종말이 곧 신을 향한 예배로 이어지는 서정적인 분위기가 압권입니다.",
         isLiked: false,
         comments: []
@@ -45,7 +45,7 @@ const artPieces = [
         title: "감자 먹는 사람들 (The Potato Eaters)",
         artist: "빈센트 반 고흐 (Vincent van Gogh)",
         year: "1885",
-        imageUrl: "https://share.google/t8D10BrEpz8nacS7v",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUD4heGpX4qW0xf3b8w4v_qrpE32A5e9CHO9YS0QWkA&s=10",
         description: "반 고흐가 스스로 자신의 첫 번째 걸작이라 칭했던 초기 리얼리즘 시기 작품입니다. 희미한 등불 아래, 자신들이 직접 거친 흙을 파서 수확한 감자를 나누어 먹는 광부와 농민들의 모습을 통해 손으로 노동하는 이들의 정직한 삶과 그들이 지닌 깊은 유대감을 투박하고 진실되게 담아냈습니다.",
         isLiked: false,
         comments: []
@@ -55,7 +55,7 @@ const artPieces = [
         title: "직조공 (The Weaver)",
         artist: "빈센트 반 고흐 (Vincent van Gogh)",
         year: "1884",
-        imageUrl: "https://share.google/3DOR2xknjFUzjgus1",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCNKN-9-LRKDwUDzMpeyYT-F2JB2zq2oprTOfyvGb8Yvn1cKgmeKfTfJG&s=10",
         description: "네덜란드 누에넨 시절, 고흐가 거대한 베틀 앞에 앉아 기계의 일부처럼 묵묵히 직물을 짜내려가는 직조공들의 고독하고 치열한 노동 환경을 깊이 관찰하여 그린 작품입니다. 어두운 방안에서 묵직한 가업을 잇는 노동자의 실루엣이 엄숙한 분위기를 풍깁니다.",
         isLiked: false,
         comments: []
@@ -65,7 +65,7 @@ const artPieces = [
         title: "건설자들 (The Builders)",
         artist: "페르낭 레제 (Fernand Léger)",
         year: "1950",
-        imageUrl: "https://share.google/8EnkLkDrJTm98gVep",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5reml-95fOToafQLpZ2AKTxmc6Ls0NtnUkzQa2KVfdQ&s=10",
         description: "20세기 큐비즘과 기계 미학의 거장 페르낭 레제가 전후 사회를 재건하는 노동자들의 활기차고 당당한 모습을 찬미한 현대 명작입니다. 거대한 철골 구조물과 인간의 신체를 기하학적이고 대담한 원색으로 대비시켜, 현대 산업 사회 속에서 주체적으로 미래를 건설해 나가는 인류의 연대와 노동의 에너지를 힘있게 시각화했습니다.",
         isLiked: false,
         comments: []
