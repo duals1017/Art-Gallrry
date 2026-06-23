@@ -1,62 +1,72 @@
-// 미술 작품 데이터 저장소
+// 미술 작품 데이터 저장소 (기획전: 노동의 존엄성 : 프로테스탄트 노동윤리와 미술)
 const artPieces = [
     {
         id: "art-1",
-        title: "아무도 기다리지 않았다 (They Did Not Expect Him)",
-        artist: "일리야 레핀 (Ilya Repin)",
-        year: "1884",
-        imageUrl: "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/71eP/image/cpM1rAW7tauWyhYgHfz4W_EQ7HY.jpg",
-        description: "러시아 혁명가 또는 유배자가 예고도 없이 갑작스럽게 집으로 돌아온 극적인 순간을 포착한 일리야 레핀의 마스터피스입니다. 문을 열고 들어오는 사내의 초라하고 불안한 모습과 그를 바라보는 어머니, 아내, 자녀들의 놀라움과 어색함, 반가움이 교차하는 복잡한 심리 상태가 인물들의 눈빛과 표정에 생생하게 묘사되어 있습니다.",
+        title: "돌 깨는 사람들 (The Stone Breakers)",
+        artist: "귀스타브 쿠르베 (Gustav Courbet)",
+        year: "1849",
+        imageUrl: "https://share.google/pAOyvSqvIB01Udf7X",
+        description: "사실주의(리얼리즘)의 거장 쿠르베가 노동의 가혹한 현실을 여과 없이 포착한 기념비적인 작품입니다. 세습되는 빈곤과 고단한 육체노동을 하는 노인과 소년의 모습을 이상화나 미화 없이 거칠고 사실적인 필치로 그려내어 당대 사회에 큰 충격을 주었습니다.",
         isLiked: false,
         comments: []
     },
     {
         id: "art-2",
-        title: "1581년 11월 16일, 이반 뇌제와 그의 아들 (Ivan the Terrible and His Son Ivan)",
-        artist: "일리야 레핀 (Ilya Repin)",
-        year: "1885",
-        imageUrl: "https://static01.nyt.com/images/2018/05/28/world/28russia-painting-2/28russia-painting-2-superJumbo.jpg?quality=75&auto=webp",
-        description: "러시아 역사상 가장 끔찍한 비극 중 하나인, 이반 뇌제가 홧김에 자신의 아들을 지팡이로 쳐서 죽음에 이르게 한 직후의 참혹한 순간을 그린 작품입니다. 아들을 피투성이로 안고 광기에 가득 찬 눈으로 뒤늦은 후회와 공포를 느끼는 이반 뇌제의 황량한 눈빛은 보는 이에게 깊은 충격을 안겨줍니다.",
+        title: "오르낭의 매장 (A Burial At Ornans)",
+        artist: "귀스타브 쿠르베 (Gustav Courbet)",
+        year: "1849",
+        imageUrl: "https://share.google/kqVi2D3UzWXlansCa",
+        description: "전통적으로 신화나 역사 속 영웅들에게만 허락되었던 거대한 크기의 캔버스에, 평범한 시골 마을 주민들의 장례식 풍경을 있는 그대로 그려낸 쿠르베의 또 다른 대표작입니다. 평범한 인간의 죽음과 삶 역시 종교적·역사적 사건만큼이나 엄숙하고 존엄하다는 것을 웅변합니다.",
         isLiked: false,
         comments: []
     },
     {
         id: "art-3",
-        title: "오스만 제국의 파디샤 메흐메트 4세에게 답장을 보내는 자포로지예의 카자크",
-        artist: "일리야 레핀 (Ilya Repin)",
-        year: "1891",
-        imageUrl: "https://archivenew.vop.co.kr/images/cdcfc3e484a1b92ecab31ba7e4109c20/2021-10/marked/14054515_11.jpg",
-        description: "오스만 제국 황제의 항복 권고 편지를 받은 카자크 전사들이 온갖 조롱과 욕설을 섞어 답장을 작성하며 호쾌하게 웃어젖히는 장면을 그린 거작입니다. 그림 속 인물 한 명 한 명의 고유한 웃음소리가 화면 밖으로 들리는 듯한 놀라운 생동감과 카자크족 특유의 자유분방하고 거친 기개가 압권입니다.",
+        title: "이삭 줍기 (The Gleaners)",
+        artist: "장 프랑수아 밀레 (Jean-François Millet)",
+        year: "1857",
+        imageUrl: "https://share.google/LCvflXNb8E2KALnj9",
+        description: "수확이 끝난 거친 밭에서 남겨진 이삭을 줍고 있는 세 여인의 모습을 숭고하고 대지 같은 무게감으로 표현한 밀레의 마스터피스입니다. 허리를 굽혀 묵묵히 일하는 그들의 뒷모습은 프로테스탄트적인 노동의 신성함과 고요한 경건함을 자아냅니다.",
         isLiked: false,
         comments: []
     },
     {
         id: "art-4",
-        title: "오네긴과 렌스키의 결투 (The Duel of Onegin and Lensky)",
-        artist: "일리야 레핀 (Ilya Repin)",
-        year: "1899",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLavjc0cMl5ky7oyE1lTeIdH6JcvZaNSlKcA&s",
-        description: "푸시킨의 유명한 운문 소설 '유진 오네긴'의 가장 비극적인 하이라이트인 두 친구의 결투 장면을 묘사한 작품입니다. 사소한 오해와 질투, 그리고 사회적 체면 때문에 서로에게 총구를 겨눠야만 하는 오네긴과 렌스키의 서늘하고 쓸쓸한 운명적 긴장감이 설원을 배경으로 차갑게 녹아들어 있습니다.",
+        title: "만종 (The Angelus)",
+        artist: "장 프랑수아 밀레 (Jean-François Millet)",
+        year: "1859",
+        imageUrl: "https://share.google/f2oj29a71N3WPsPya",
+        description: "하루의 고된 농사일을 마치고 멀리서 들려오는 교회의 저녁 종소리에 맞춰 부부가 경건하게 감사의 기도를 올리는 장면입니다. 소박한 노동의 현장과 신앙이 결합된 가장 아름다운 순간으로, 노동의 종말이 곧 신을 향한 예배로 이어지는 서정적인 분위기가 압권입니다.",
         isLiked: false,
         comments: []
     },
     {
         id: "art-5",
-        title: "이카루스 (Icarus)",
-        artist: "앙리 마티스 (Henri Matisse)",
-        year: "1947",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbiMApCy9XYUmRh362MDYVRKr84Ft4RHPazQN3dutBDHBXCccDp5Frdg&s=10",
-        description: "앙리 마티스가 노년에 병마와 싸우며 가위와 색종이만을 이용해 완성한 '컷아웃(Paper Cutouts)' 기법의 전설적인 작품입니다. 미니멀하게 절제된 파란 배경 속 춤추는 듯 떨어지는 검은 실루엣의 이카루스, 그리고 그의 가슴속 붉은 심장은 신화를 넘어 인간의 영원한 열정과 자유에 대한 갈망을 상징합니다.",
+        title: "감자 먹는 사람들 (The Potato Eaters)",
+        artist: "빈센트 반 고흐 (Vincent van Gogh)",
+        year: "1885",
+        imageUrl: "https://share.google/t8D10BrEpz8nacS7v",
+        description: "반 고흐가 스스로 자신의 첫 번째 걸작이라 칭했던 초기 리얼리즘 시기 작품입니다. 희미한 등불 아래, 자신들이 직접 거친 흙을 파서 수확한 감자를 나누어 먹는 광부와 농민들의 모습을 통해 손으로 노동하는 이들의 정직한 삶과 그들이 지닌 깊은 유대감을 투박하고 진실되게 담아냈습니다.",
         isLiked: false,
         comments: []
     },
     {
         id: "art-6",
-        title: "골콩드 (Golconda / 겨울비)",
-        artist: "르네 마그리트 (René Magritte)",
-        year: "1953",
-        imageUrl: "https://m.imaeil.com/photos/2019/02/25/2019022506160495484_l.jpg",
-        description: "초현실주의의 거장 르네 마그리트가 그린 기묘하고도 매혹적인 작품입니다. 중산모를 쓰고 코트를 입은 똑같은 모습의 신사들이 하늘에서 비처럼 중력 없이 무수히 쏟아져 내리는(혹은 허공에 떠 있는) 풍경을 통해, 현대 사회 속 인간들의 기계적인 익명성과 획일성을 위트 있게 풍자하고 있습니다.",
+        title: "직조공 (The Weaver)",
+        artist: "빈센트 반 고흐 (Vincent van Gogh)",
+        year: "1884",
+        imageUrl: "https://share.google/3DOR2xknjFUzjgus1",
+        description: "네덜란드 누에넨 시절, 고흐가 거대한 베틀 앞에 앉아 기계의 일부처럼 묵묵히 직물을 짜내려가는 직조공들의 고독하고 치열한 노동 환경을 깊이 관찰하여 그린 작품입니다. 어두운 방안에서 묵직한 가업을 잇는 노동자의 실루엣이 엄숙한 분위기를 풍깁니다.",
+        isLiked: false,
+        comments: []
+    },
+    {
+        id: "art-7",
+        title: "건설자들 (The Builders)",
+        artist: "페르낭 레제 (Fernand Léger)",
+        year: "1950",
+        imageUrl: "https://share.google/8EnkLkDrJTm98gVep",
+        description: "20세기 큐비즘과 기계 미학의 거장 페르낭 레제가 전후 사회를 재건하는 노동자들의 활기차고 당당한 모습을 찬미한 현대 명작입니다. 거대한 철골 구조물과 인간의 신체를 기하학적이고 대담한 원색으로 대비시켜, 현대 산업 사회 속에서 주체적으로 미래를 건설해 나가는 인류의 연대와 노동의 에너지를 힘있게 시각화했습니다.",
         isLiked: false,
         comments: []
     }
@@ -150,7 +160,7 @@ function addCustomArt() {
     initGallery();
 }
 
-// 1. 초기 갤러리 메인 그리드 리스트 그리기 (모바일 차단 완벽 방어 스타일 세팅)
+// 1. 초기 갤러리 메인 그리드 리스트 그리기
 function initGallery() {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
